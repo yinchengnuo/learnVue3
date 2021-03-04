@@ -12,7 +12,7 @@
 import { routes } from '@/router'
 export default {
   setup () {
-    return { routes }
+    return { routes: routes.slice(1) }
   }
 }
 </script>
@@ -45,7 +45,7 @@ export default {
   }
 }
 
-ol {
+ul, ol {
   display: inline-block;
   li {
     text-align: left;

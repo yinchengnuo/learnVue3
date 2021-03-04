@@ -16,6 +16,7 @@ export default {
 
     setInterval(() => {
       useRef.value++
+      // const str = '不过有轮子，为什么不用呢？ fuse.js，可以轻松实现前端模糊查询。'
     }, 333)
 
     const useComputed = computed(() => `当前 ref 为 ${useRef.value}`)

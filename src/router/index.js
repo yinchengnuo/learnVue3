@@ -2,6 +2,7 @@ import Index from '../views/Index.vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 export const routes = [
+  { name: 'Demo', path: '/Demo', component: () => import('../views/Demo.vue') },
   { path: '/', name: 'Index', component: Index },
   { name: 'Setup', path: '/Setup', component: () => import('../views/Setup.vue') },
   { name: 'Ref', path: '/Ref', component: () => import('../views/Ref.vue') },
