@@ -1,6 +1,12 @@
-import { createApp } from 'vue'
+import * as vue from 'vue'
 import App from './App.vue'
-import router from './router'
 import store from './store'
+import router from './router'
 
-createApp(App).use(store).use(router).mount('#app')
+console.log(vue) // vue 变成了一个对象
+
+vue.createApp(App).use(store).use(router).use({
+  install (app) {
+    app.config.globalProperties.console = console
+  }
+}).mount('#app')
