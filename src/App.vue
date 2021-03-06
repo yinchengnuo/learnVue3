@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <router-link v-for="(route, index) in routes" :key="index" :to="route.path">
+    <router-link v-for="(route, index) in routes" :key="index" replace :to="route.path">
       <span>{{ route.name }}</span>
       <span v-if="index < routes.length - 1" style="margin: 12px;">|</span>
     </router-link>
@@ -23,7 +23,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  user-select: none;
   color: #2c3e50;
 }
 
@@ -35,6 +34,7 @@ export default {
   flex-wrap: wrap;
   max-width: 80vw;
   font-size: 24px;
+  user-select: none;
   justify-content: center;
   a {
     color: #2c3e50;

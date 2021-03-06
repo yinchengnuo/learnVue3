@@ -9,7 +9,10 @@ export const routes = [
   { name: 'Reactive', path: '/Reactive', component: () => import('../views/Reactive.vue') },
   { name: 'ToRef/s', path: '/ToRef/s', component: () => import('../views/toRef&s.vue') },
   { name: 'Computed', path: '/Computed', component: () => import('../views/Computed.vue') },
-  { name: 'Watch', path: '/Watch', component: () => import('../views/Watch.vue') }
+  { name: 'Watch', path: '/Watch', component: () => import('../views/Watch.vue') },
+  { name: 'LifeCycle', path: '/LifeCycle', component: () => import('../views/LifeCycle.vue') },
+  { name: 'Provide/Inject', path: '/Provide/Inject', component: () => import('../views/Provide&Inject.vue') },
+  { name: 'TemplateRef', path: '/TemplateRef', component: () => import('../views/TemplateRef.vue') }
 ]
 
 export default createRouter({
