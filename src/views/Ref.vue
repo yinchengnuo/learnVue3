@@ -1,7 +1,8 @@
 <template>
-  <h2>{{ useRef }}</h2>
-  <h2>{{ useRefArray }}</h2>
-  <h2>{{ useRefObject }}</h2>
+  <h2>useRef：{{ useRef }}</h2>
+  <h2>useRefArray：{{ useRefArray }}</h2>
+  <h2>useRefObject：{{ useRefObject }}</h2>
+  <h3>refData：{{ refData }}</h3>
   <ol>
     <li v-for="item in list" :key="item.msg">
       <h3>{{ item.msg }}</h3>
@@ -13,6 +14,11 @@
 import { ref } from 'vue'
 
 export default {
+  data () {
+    return {
+      refData: ref(0)
+    }
+  },
   setup () {
     const useRef = ref(0)
     const useRefArray = ref([1, 2, 3, 4])
@@ -40,6 +46,14 @@ export default {
         { msg: '当包装对象被暴露给模版渲染上下文，或是被嵌套在另一个响应式对象中的时候，它会被自动展开 (unwrap) 为内部的值' }
       ]
     }
+  },
+  mounted () {
+    // this.$set(this, 'refCreated', ref('refCreated'))
+    // this.refCreated =
+    // setInterval(() => {
+    //   this.refData = Math.floor(Math.random())
+    //   console.log(this.refData)
+    // }, 1000)
   }
 }
 </script>

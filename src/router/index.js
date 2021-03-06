@@ -8,7 +8,8 @@ export const routes = [
   { name: 'Ref', path: '/Ref', component: () => import('../views/Ref.vue') },
   { name: 'Reactive', path: '/Reactive', component: () => import('../views/Reactive.vue') },
   { name: 'ToRef/s', path: '/ToRef/s', component: () => import('../views/toRef&s.vue') },
-  { name: 'Computed', path: '/Computed', component: () => import('../views/Computed.vue') }
+  { name: 'Computed', path: '/Computed', component: () => import('../views/Computed.vue') },
+  { name: 'Watch', path: '/Watch', component: () => import('../views/Watch.vue') }
 ]
 
 export default createRouter({

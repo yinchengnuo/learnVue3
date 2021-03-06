@@ -42,7 +42,8 @@ export default {
         { msg: '获取响应对象（props）的值使用解构赋值时应使用 toRefs API' },
         { msg: 'context 中的 attrs 和 solt 对象保存了父组件状态' },
         { msg: 'setup 返回的对象的属性可以用于组件的其他部分用 this 获取或用于模板渲染' },
-        { msg: 'setup 也可以直接返回一个 render 函数（return (props, slots, attrs, vnode) => ( ... )）' }
+        { msg: 'setup 也可以直接返回一个 render 函数（return (props, slots, attrs, vnode) => ( ... )）' },
+        { msg: 'setup 不可以是一个 async 函数，除非 setup 返回一个会被 resolve 的 promise 对象，用于 异步组件' }
       ]
     }
   },
