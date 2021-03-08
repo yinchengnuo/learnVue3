@@ -1,5 +1,6 @@
 <template>
   <div class="setup">
+    <button @click="changeReadonly">useReactiveReadonly: {{ useReactiveReadonly }}</button>
     <HelloWorld msg="setup 基本使用" :useRef="useRef" @event="console.log">
       <div>solt</div>
     </HelloWorld>
@@ -12,7 +13,7 @@
 </template>
 
 <script>
-import { ref, reactive, onMounted } from 'vue'
+import { ref, reactive, onMounted, readonly } from 'vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
@@ -32,9 +33,17 @@ export default {
     onMounted(function () {
       console.log(this)
     })
+
+    const useReactiveWillReadonly = reactive({ a: 1 })
+    const useReactiveReadonly = readonly(useReactiveWillReadonly)
+    const changeReadonly = () => {
+      useReactiveReadonly.a = 123
+    }
     return {
       useRef,
       useReactive,
+      changeReadonly,
+      useReactiveReadonly,
       list: [
         { msg: 'setup 执行在 beforeCreate 和 created 之前' },
         { msg: 'setup 中 this 为 undefined' },

@@ -12,7 +12,8 @@ export const routes = [
   { name: 'Watch', path: '/Watch', component: () => import('../views/Watch.vue') },
   { name: 'LifeCycle', path: '/LifeCycle', component: () => import('../views/LifeCycle.vue') },
   { name: 'Provide/Inject', path: '/Provide/Inject', component: () => import('../views/Provide&Inject.vue') },
-  { name: 'TemplateRef', path: '/TemplateRef', component: () => import('../views/TemplateRef.vue') }
+  { name: 'TemplateRef', path: '/TemplateRef', component: () => import('../views/TemplateRef.vue') },
+  { name: 'Teleport', path: '/Teleport', component: () => import('../views/Teleport.vue') }
 ]
 
 export default createRouter({
