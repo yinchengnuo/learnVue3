@@ -14,7 +14,11 @@ export const routes = [
   { name: 'Provide/Inject', path: '/Provide/Inject', component: () => import('../views/Provide&Inject.vue') },
   { name: 'TemplateRef', path: '/TemplateRef', component: () => import('../views/TemplateRef.vue') },
   { name: 'Teleport', path: '/Teleport', component: () => import('../views/Teleport.vue') },
-  { name: 'Fragment', path: '/Fragment', component: () => import('../views/Fragment.vue') }
+  { name: 'Fragment', path: '/Fragment', component: () => import('../views/Fragment.vue') },
+  { name: 'Emits', path: '/Emits', component: () => import('../views/Emits.vue') },
+  { name: 'V-model', path: '/V-model', component: () => import('../views/V-model.vue') },
+  { name: 'GlobalAPI', path: '/GlobalAPI', component: () => import('../views/GlobalAPI.vue') },
+  { name: 'TreeShaking', path: '/TreeShaking', component: () => import('../views/TreeShaking.vue') }
 ]
 
 export default createRouter({
