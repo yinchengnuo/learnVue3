@@ -13,7 +13,8 @@ export const routes = [
   { name: 'LifeCycle', path: '/LifeCycle', component: () => import('../views/LifeCycle.vue') },
   { name: 'Provide/Inject', path: '/Provide/Inject', component: () => import('../views/Provide&Inject.vue') },
   { name: 'TemplateRef', path: '/TemplateRef', component: () => import('../views/TemplateRef.vue') },
-  { name: 'Teleport', path: '/Teleport', component: () => import('../views/Teleport.vue') }
+  { name: 'Teleport', path: '/Teleport', component: () => import('../views/Teleport.vue') },
+  { name: 'Fragment', path: '/Fragment', component: () => import('../views/Fragment.vue') }
 ]
 
 export default createRouter({

@@ -49,6 +49,10 @@ ul, ol {
   display: inline-block;
   li {
     text-align: left;
+    &::marker {
+      font-size: 2em;
+      font-weight: bold;
+    }
   }
 }
 </style>

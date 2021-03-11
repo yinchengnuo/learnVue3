@@ -26,9 +26,6 @@ export default {
         { msg: '绑定后 ref 也可以 watch。需要注意的是 watch/watchEffect 是在 DOM/组件 被挂载或更新之前运行的，所以当侦听器运行副作用时，模板引用还没有被更新，因此，使用模板引用的侦听器应该用 flush: "post" 选项来定义' }
       ]
     }
-  },
-  mounted () {
-
   }
 }
 </script>

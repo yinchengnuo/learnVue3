@@ -17,9 +17,6 @@ export default {
         { msg: 'vue3.x 废除了 2.x options API 生命周期中的 beforeDestroy destroyed 使用 unmounted 替代' }
       ]
     }
-  },
-  mounted () {
-
   }
 }
 </script>

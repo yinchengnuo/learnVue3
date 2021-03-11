@@ -20,9 +20,6 @@ export default {
         { msg: 'https://v3.cn.vuejs.org/guide/composition-api-provide-inject.html' }
       ]
     }
-  },
-  mounted () {
-
   }
 }
 </script>
