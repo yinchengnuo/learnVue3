@@ -12,7 +12,7 @@ export default {
   setup () {
     return {
       list: [
-        { msg: '' }
+        { msg: 'https://v3.cn.vuejs.org/guide/migration/global-api-treeshaking.html' }
       ]
     }
   }
