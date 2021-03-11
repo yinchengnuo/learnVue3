@@ -18,7 +18,11 @@ export const routes = [
   { name: 'Emits', path: '/Emits', component: () => import('../views/Emits.vue') },
   { name: 'V-model', path: '/V-model', component: () => import('../views/V-model.vue') },
   { name: 'GlobalAPI', path: '/GlobalAPI', component: () => import('../views/GlobalAPI.vue') },
-  { name: 'TreeShaking', path: '/TreeShaking', component: () => import('../views/TreeShaking.vue') }
+  { name: 'TreeShaking', path: '/TreeShaking', component: () => import('../views/TreeShaking.vue') },
+  { name: 'Suspense', path: '/Suspense', component: () => import('../views/Suspense.vue') },
+  { name: 'Difference', path: '/Difference', component: () => import('../views/Difference.vue') },
+  { name: 'Router', path: '/Router', component: () => import('../views/Router.vue') },
+  { name: 'Vuex', path: '/Vuex', component: () => import('../views/Vuex.vue') }
 ]
 
 export default createRouter({

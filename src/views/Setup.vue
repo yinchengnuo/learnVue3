@@ -13,12 +13,13 @@
 </template>
 
 <script>
-import { ref, reactive, onMounted, readonly } from 'vue'
+import { ref, reactive, onMounted, readonly, getCurrentInstance } from 'vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   components: { HelloWorld },
   setup () {
+    console.log('getCurrentInstance', getCurrentInstance())
     console.log(this, 'this')
     console.log('setup')
     const useRef = ref(0)
@@ -52,7 +53,8 @@ export default {
         { msg: 'context 中的 attrs 和 solt 对象保存了父组件状态' },
         { msg: 'setup 返回的对象的属性可以用于组件的其他部分用 this 获取或用于模板渲染' },
         { msg: 'setup 也可以直接返回一个 render 函数（return (props, slots, attrs, vnode) => ( ... )）' },
-        { msg: 'setup 不可以是一个 async 函数，除非 setup 返回一个会被 resolve 的 promise 对象，用于 异步组件' }
+        { msg: 'setup 不可以是一个 async 函数，除非 setup 返回一个会被 resolve 的 promise 对象，用于结合 Suspense 实现异步组件' },
+        { msg: '可以通过 getCurrentInstance API 获取组件实例' }
       ]
     }
   },
