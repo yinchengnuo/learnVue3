@@ -1,8 +1,6 @@
 <template>
   <ol>
-    <li v-for="item in list" :key="item.msg">
-      <h3>{{ item.msg }}</h3>
-    </li>
+    <li v-for="item in list" :key="item.msg" v-html="item.msg" />
   </ol>
   <br>
   <VModelChild v-model="childVal" />

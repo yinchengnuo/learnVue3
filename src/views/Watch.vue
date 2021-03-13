@@ -2,9 +2,7 @@
   <h3>type：{{ type }}</h3>
   <h3>count：{{ count }}</h3>
   <ol>
-    <li v-for="item in list" :key="item.msg">
-      <h3>{{ item.msg }}</h3>
-    </li>
+    <li v-for="item in list" :key="item.msg" v-html="item.msg" />
   </ol>
 </template>
 

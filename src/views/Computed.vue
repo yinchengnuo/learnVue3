@@ -2,9 +2,7 @@
   <h2>useComputed1：{{ useComputed1 }}</h2>
   <h2>useComputed2：{{ useComputed2 }}</h2>
   <ol>
-    <li v-for="item in list" :key="item.msg">
-      <h3>{{ item.msg }}</h3>
-    </li>
+    <li v-for="item in list" :key="item.msg" v-html="item.msg" />
   </ol>
 </template>
 

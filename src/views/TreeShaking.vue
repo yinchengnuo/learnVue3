@@ -1,8 +1,6 @@
 <template>
   <ol>
-    <li v-for="item in list" :key="item.msg">
-      <h3>{{ item.msg }}</h3>
-    </li>
+    <li v-for="item in list" :key="item.msg" v-html="item.msg" />
   </ol>
 </template>
 
@@ -12,7 +10,7 @@ export default {
   setup () {
     return {
       list: [
-        { msg: 'https://v3.cn.vuejs.org/guide/migration/global-api-treeshaking.html' }
+        { msg: '<a href="https://v3.cn.vuejs.org/guide/migration/global-api-treeshaking.html" target="_blank">https://v3.cn.vuejs.org/guide/migration/global-api-treeshaking.html</a>' }
       ]
     }
   }

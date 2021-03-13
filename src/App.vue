@@ -22,6 +22,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  word-break: break-all;
   text-align: center;
   color: #2c3e50;
 }
@@ -48,9 +49,12 @@ export default {
 ul, ol {
   display: inline-block;
   li {
+    font-size: 1.2em;
     text-align: left;
+    font-weight: bold;
     &::marker {
       font-size: 2em;
+      line-height: 2;
       font-weight: bold;
     }
   }

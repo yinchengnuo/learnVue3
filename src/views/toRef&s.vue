@@ -2,9 +2,7 @@
   <h2>{{ useReactive }}</h2>
   <!-- <h2>{{ useReactiveBase }}</h2> -->
   <ol>
-    <li v-for="item in list" :key="item.msg">
-      <h3>{{ item.msg }}</h3>
-    </li>
+    <li v-for="item in list" :key="item.msg" v-html="item.msg" />
   </ol>
 </template>
 
@@ -45,7 +43,7 @@ export default {
         { msg: 'toRef/s 可以用来为源响应式对象上的某个/些属性新创建一个/些 ref。然后这个/些 ref 可以被传递，同时会保持对其源属性的响应式连接' },
         { msg: 'toRef 可以为源响应式对象上某个属性创建一个 ref，即使这个 ref 一开始不存在。ref 创建后，对 ref value 的操作会反作用到原响应式对象上。如果这个属性不存在，vue 会创建它。' },
         { msg: 'roRefs 可以为源响应式对象上某些属性创建与之相对应的 ref，如果某个属性不存在，那么与之对应的 ref 为 undefined。同时操作创建成功的 ref 的 value 也会作用到源响应式对象上' },
-        { msg: '更多 ref 相关操作详见文档：https://v3.cn.vuejs.org/api/refs-api.html#ref' }
+        { msg: '更多 ref 相关操作详见文档：<a href="https://v3.cn.vuejs.org/api/refs-api.html#ref" target="_blank">https://v3.cn.vuejs.org/api/refs-api.html#ref</a>' }
       ]
     }
   }
